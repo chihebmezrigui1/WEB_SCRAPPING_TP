@@ -5,7 +5,7 @@ app = Flask(__name__, template_folder="frontend/templates")
 
 @app.route("/")
 def home():
-    with open("scraper/champions.json", encoding="utf-8") as f:
+    with open("all_champions_stats.json", encoding="utf-8") as f:
         champions = json.load(f)
     return render_template("index.html", champions=champions)
 
