@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>League of Legends Champions</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Champions LoL</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; margin: 0; padding: 0; }
+        h1 { margin: 20px; color: #333; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+        .card { background: white; padding: 15px; border-radius: 10px; width: 200px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; }
+        img { width: 100px; height: 100px; border-radius: 50%; }
+        h3 { margin: 10px 0; }
+        p { margin: 5px 0; color: #666; }
+    </style>
 </head>
 <body>
+    <h1>Champions de League of Legends</h1>
     <div class="container">
-        <h1>League of Legends Champions</h1>
-        <div class="card-container">
-            {% for champ in champions %}
-            <div class="card">
-                <img src="/static/images/{{ champ.name }}.jpg" alt="{{ champ.name }}">
-                <h2>{{ champ.name }}</h2>
-                <p>Role: {{ champ.role }}</p>
-            </div>
-            {% endfor %}
+        {% for champ in champions %}
+        <div class="card">
+            <img src="{{ champ.image }}" alt="{{ champ.name }}">
+            <h3>{{ champ.name }}</h3>
+            <p><strong>Attaque :</strong> {{ champ.stats[0].attaque }}</p>
+            <p><strong>Santé :</strong> {{ champ.stats[0].sante }}</p>
+            <p><strong>Armure :</strong> {{ champ.stats[0].armure }}</p>
+            <p><strong>Rôle :</strong> {{ champ.stats[0].lane }}</p>
         </div>
+        {% endfor %}
     </div>
 </body>
 </html>
