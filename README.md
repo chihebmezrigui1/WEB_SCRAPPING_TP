@@ -12,7 +12,7 @@ Assurez-vous d'avoir **Python 3+** installé sur votre machine.
 
 ### 2️⃣ Cloner le projet
 ```bash
- git clone https://github.com/votre-repository.git
+ git clone https://github.com/chihebmezrigui1/WEB_SCRAPPING_TP.git
  cd WEB_SCRAPPING_TP
 ```
 
