@@ -16,11 +16,11 @@ Assurez-vous d'avoir **Python 3+** installé sur votre machine.
  cd WEB_SCRAPPING_TP
 ```
 
-### 3️⃣ Créer un environnement virtuel (optionnel mais recommandé)
+### 3️⃣ Créer un environnement virtuel
 ```bash
 python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate    # Windows
+source venv/bin/activate
+venv\Scripts\activate  
 ```
 
 ### 4️⃣ Installer les dépendances
